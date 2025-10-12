@@ -1,0 +1,93 @@
+@property --main-font {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@property --paragraph-font {
+  font-family: "Courier New", Courier, monospace;
+}
+
+:root {
+  /* color */
+  --back-color: #555;
+  --front-color: rgb(241, 226, 190);
+  --font-color-light: rgb(15, 157, 232);
+  --font-color-medium: rgb(253, 63, 146);
+  --font-color-dark: rgb(44, 3, 11);
+  /* size */
+  --main-size: 1rem;
+  --max-size: calc(var(--main-size) * 4);
+  --medium-size: calc(var(--main-size) * 3);
+  --normal-size: calc(var(--main-size) * 2);
+  --small-size: calc(var(--main-size) * 0.8);
+  --xs-size: calc(var(--main-size) * 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--font-color-light);
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(--max-size);
+  color: var(--font-color-medium);
+}
+
+h2 {
+  font-size: var(--medium-size);
+  color: var(--front-color);
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+h3,
+p {
+  font-size: var(--normal-size);
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+  font-weight: 900;
+}
+
+#head {
+  padding: 50px;
+  border-radius: 30px;
+}
+
+#link {
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--front-color);
+  display: none;
+}
+
+#head,
+#link {
+  background-color: var(--font-color-dark);
+  border: 1px solid var(--front-color);
+}
