@@ -1,0 +1,92 @@
+:root {
+    /* color */
+    --color-blue-marine: #1e3d59;
+    --color-beige-amande: #f5f0e1;
+    --color-rouge-orange: #ff6e40;
+    --color-mangue: #ffc13b;
+    /* font-size */
+    --main-size: 1rem;
+    --max-size: calc(var(--main-size) * 3);
+    --medium-size: calc(var(--main-size) * 2);
+    --normal-size: calc(var(--main-size) * 1.3);
+    --small-size: calc(var(--main-size) * 0.8);
+    --x-small-size: calc(var(--main-size) * 0.6);
+}
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-blue-marine);
+}
+
+body {
+    max-width: 800px;
+    border: 1px solid white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            padding: 20px 0;
+            &:nth-child(2) {
+                padding: 20px;
+            } /* fin header ul li:nth-child(2) */
+            a {
+                text-decoration: none;
+                font-size: var(--normal-size);
+                color: var(--color-beige-amande);
+                transition: 0.5s;
+                &:hover {
+                    color: var(--color-mangue);
+                } /* fin header ul li a:hover */
+                &:active {
+                    color: var(--color-rouge-orange);
+                } /* fin header ul li a:active */
+            } /* fin header ul li a */
+        } /* fin header ul li */
+    } /* fin header ul */
+} /* fin header */
+
+#main-cv {
+    width: 100%;
+    border-top: 1px solid var(--color-mangue);
+    padding: 20px;
+}
+
+#left-cv {
+    width: 200px;
+    float: left;
+    border-right: 1px solid var(--color-mangue);
+    article {
+        display: flex;
+        img {
+            max-width: 100px;
+        }
+
+    }
+}
+
+#right-cv {
+    article {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--color-mangue);
+        padding-bottom: 20px;
+        h1 {
+            color: var(--color-mangue);
+        } /* fin #right-cv article h1 */
+        h2, h3 {
+            color: var(--color-beige-amande);
+            font-weight: 300;
+        } /* fin #right-cv article h1,h2 */
+    }
+}

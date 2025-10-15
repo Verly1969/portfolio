@@ -76,10 +76,22 @@ p {
   padding: 20px;
   border-radius: 20px;
   color: var(--front-color);
-}
+  a {
+    text-decoration: none;
+    color: var(--font-color-medium);
+    transition: 0.5s;
+    &:hover {
+      color: var(--font-color-light);
+    } /* fin #link a:hover */
+    &:active {
+      color: var(--front-color);
+    }
+  } /* fin #link a */
+} /* fin #link */
 
 #head,
 #link {
   background-color: var(--font-color-dark);
   border: 1px solid var(--front-color);
+  opacity: 0.8;
 }
